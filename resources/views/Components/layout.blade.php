@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full bg-gray-100">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Lets Begin</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="h-full">
     <!--
   This example requires updating your template:
 
@@ -21,14 +21,14 @@
       <div class="flex h-16 items-center justify-between">
         <div class="flex items-center">
           <div class="flex-shrink-0">
-            <img class="h-8 w-8" src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGxvZ28lMjBwbmd8ZW58MHx8MHx8fDA%3D" alt="Your Company">
+            <img class="h-8 w-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
           </div>
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              <a href="/" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Home</a>
-        <a href="/contact" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact</a>
-        <a href="/about" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About</a>
+              <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
+              <x-nav-link href="/about" :active="request()->is('about')">About</x-nav-link>
+              <x-nav-link href="/contact" :active="request()->is('contact')">Contact</x-nav-link>
             </div>
           </div>
         </div>
